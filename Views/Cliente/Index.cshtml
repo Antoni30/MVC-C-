@@ -1,7 +1,51 @@
-﻿
+﻿@model List<Test.Data.Cliente>
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Clientes";
 }
 
-<h1>Index</h1>
+<h1 class="mb-4">Lista de Clientes</h1>
 
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark text-center">
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Cédula</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha Nacimiento</th>
+                <th scope="col">Email</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <th scope="row" class="text-center">@cliente.Codigo</th>
+                    <td class="text-center">@cliente.Cedula</td>
+                    <td class="text-center">@cliente.Apellido</td>
+                    <td class="text-center">@cliente.Nombre</td>
+                    <td class="text-center text-nowrap">@cliente.FechaNacimiento.ToString("yyyy-MM-dd")</td>
+                    <td class="text-center">@cliente.Email</td>
+                    <td class="text-center">@cliente.Telefono</td>
+                    <td class="text-center">@cliente.Direccion</td>
+                    <td class="text-center">
+                        @if (cliente.Estado)
+                        {
+                            <span class="badge bg-success">Activo</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Inactivo</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="nav-link" asp-area="" asp-controller="Cliente" asp-action="Create"><i class="fas fa-cog"></i>Agregar</a>
+</div>

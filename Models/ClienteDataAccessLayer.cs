@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using Test.Data;
 
@@ -38,7 +39,31 @@ namespace Test.Models
             }
             return listaCliente;
         }
+
+        public void AddClient(Cliente client)
+        {
+            using (SqlConnection connection = new SqlConnection(conneccionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand("cliente_Insert", connection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Los parámetros deben coincidir con los definidos en el procedimiento almacenado
+                sqlCommand.Parameters.AddWithValue("@Cedula", client.Cedula);
+                sqlCommand.Parameters.AddWithValue("@Apellidos", client.Apellido);
+                sqlCommand.Parameters.AddWithValue("@Nombres", client.Nombre);
+                sqlCommand.Parameters.AddWithValue("@FechaNacimiento", client.FechaNacimiento);
+                sqlCommand.Parameters.AddWithValue("@Mail", client.Email);
+                sqlCommand.Parameters.AddWithValue("@Telefono", client.Telefono);
+                sqlCommand.Parameters.AddWithValue("@Direccion", client.Direccion ?? (object)DBNull.Value); // Usa DBNull para valores nulos
+                sqlCommand.Parameters.AddWithValue("@Estado", client.Estado);
+
+                connection.Open();
+                sqlCommand.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
     }
 
-   
+
 }

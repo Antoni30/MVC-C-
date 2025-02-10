@@ -4,49 +4,134 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Test</title>
+
+    <!-- Estilos principales -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Test.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/stylesI.css" asp-append-version="true" />
+
+    <!-- Bootstrap y FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #2f3d4a;
+            color: white;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+        }
+
+            .sidebar h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .sidebar .nav-link {
+                color: white;
+                font-size: 18px;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                transition: background 0.3s;
+            }
+
+                .sidebar .nav-link i {
+                    width: 30px;
+                    text-align: center;
+                    margin-right: 10px;
+                }
+
+                .sidebar .nav-link:hover {
+                    background: #1e2a36;
+                }
+
+        /* Contenido Principal */
+        #content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+            min-height: 100vh;
+            transition: margin-left 0.3s;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #f8f9fa;
+            padding: 10px;
+        }
+
+            .navbar .nav-item a {
+                color: #333;
+                font-size: 18px;
+                margin-right: 15px;
+            }
+
+                .navbar .nav-item a:hover {
+                    color: #007bff;
+                }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Test</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="Index">Cliente</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>My App</h2>
+        <nav class="nav flex-column">
+            <a class="nav-link" asp-area="" asp-controller="Cliente" asp-action="Index"><i class="fas fa-cog"></i>Cliente</a>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- Contenido Principal -->
+    <div id="content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#"><i class="fas fa-bell text-danger"></i></a>
+                    </li>
+                    <li class="nav-item"><a href="#">Test User</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <h1>Simple Sidebar</h1>
+            <p>Mantén todo el contenido dentro de <code>#content</code>.</p>
+        </div>
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-top footer text-muted text-center py-3">
         <div class="container">
             &copy; 2025 - Test - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

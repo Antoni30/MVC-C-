@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KCD/Fir0dnovM+ta2gAjwpVehXWxgoblg2+oZ7Bnq3M=",
+  "Hash": "+H2p6JtIcocXb5SdtC5wl8jXlghnrjbluy80TQdVOUk=",
   "Source": "Test",
   "BasePath": "_content/Test",
   "Mode": "Default",
@@ -73,11 +73,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "7e6tgtpdkl",
+      "Integrity": "nznteQTuPRkIfACEFmdAWAqYRU8d+X/70b9zQkDsiE8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\DET PC\\source\\repos\\Test\\Test\\wwwroot\\css\\stylesI.css",
+      "SourceId": "Test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DET PC\\source\\repos\\Test\\Test\\wwwroot\\",
+      "BasePath": "_content/Test",
+      "RelativePath": "css/stylesI#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sxxs50rnrb",
+      "Integrity": "MNBllCKafiuGr86Kil5Cknc3CaOHgTH25d69oBx/IVM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\stylesI.css"
     },
     {
       "Identity": "C:\\Users\\DET PC\\source\\repos\\Test\\Test\\wwwroot\\favicon.ico",
@@ -1321,7 +1342,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
+      "Route": "css/site.7e6tgtpdkl.css",
       "AssetFile": "C:\\Users\\DET PC\\source\\repos\\Test\\Test\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1331,7 +1352,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "368"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1360,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"nznteQTuPRkIfACEFmdAWAqYRU8d+X/70b9zQkDsiE8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Feb 2025 17:01:15 GMT"
+          "Value": "Thu, 06 Feb 2025 16:29:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,7 +1374,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "7e6tgtpdkl"
         },
         {
           "Name": "label",
@@ -1361,7 +1382,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-nznteQTuPRkIfACEFmdAWAqYRU8d+X/70b9zQkDsiE8="
         }
       ]
     },
@@ -1376,7 +1397,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "368"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1405,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"nznteQTuPRkIfACEFmdAWAqYRU8d+X/70b9zQkDsiE8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Feb 2025 17:01:15 GMT"
+          "Value": "Thu, 06 Feb 2025 16:29:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1419,89 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-nznteQTuPRkIfACEFmdAWAqYRU8d+X/70b9zQkDsiE8="
+        }
+      ]
+    },
+    {
+      "Route": "css/stylesI.css",
+      "AssetFile": "C:\\Users\\DET PC\\source\\repos\\Test\\Test\\wwwroot\\css\\stylesI.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MNBllCKafiuGr86Kil5Cknc3CaOHgTH25d69oBx/IVM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 16:37:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MNBllCKafiuGr86Kil5Cknc3CaOHgTH25d69oBx/IVM="
+        }
+      ]
+    },
+    {
+      "Route": "css/stylesI.sxxs50rnrb.css",
+      "AssetFile": "C:\\Users\\DET PC\\source\\repos\\Test\\Test\\wwwroot\\css\\stylesI.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MNBllCKafiuGr86Kil5Cknc3CaOHgTH25d69oBx/IVM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 16:37:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sxxs50rnrb"
+        },
+        {
+          "Name": "label",
+          "Value": "css/stylesI.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MNBllCKafiuGr86Kil5Cknc3CaOHgTH25d69oBx/IVM="
         }
       ]
     },

@@ -13,5 +13,23 @@ namespace Test.Controllers
             clientes = clietDataAcessLayer.getAllCliente();
             return View(clientes);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create([Bind] Cliente client)
+        {
+            if (ModelState.IsValid)
+            {
+                clietDataAcessLayer.AddClient(client);
+                return RedirectToAction("Index");
+            }
+
+            return View(client);
+        }
+
     }
 }

@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\DET PC\\source\\repos\\Test\\Test\\wwwroot\\css\\stylesI.css",
+      "PackagePath": "staticwebassets\\css\\stylesI.css"
+    },
+    {
       "Id": "C:\\Users\\DET PC\\source\\repos\\Test\\Test\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
